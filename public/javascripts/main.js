@@ -30,22 +30,6 @@ $(document).ready(function($) {
 	};
 	loader();
 
-	var wfh = function()
-	{
-		var anchorDate = new Date("2023-06-01");
-		var today = new Date();
-		var timeDif = today.getTime() - anchorDate.getTime();
-		var dayDif = Math.floor(timeDif / (1000 * 3600 * 24));
-		var result;
-
-		if((dayDif % 14) < 7) result = "Yes";
-		else result = "No";
-
-		document.getElementById("wfh").innerHTML = result;
-	};
-
-	wfh();
-
 	var carousel = function() {
 		$('.home-slider').owlCarousel({
 	    loop:true,
@@ -76,6 +60,9 @@ $(document).ready(function($) {
 	   });
 	};
 	carousel();
+	
+
+	
 
 	var fullHeight = function() {
 
@@ -217,7 +204,5 @@ $(document).ready(function($) {
 
 	};
 	pageProgress();
-
-
 });
 
